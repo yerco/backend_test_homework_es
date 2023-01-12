@@ -8,13 +8,13 @@ files_list = ['program.py', 'readme.md']
 
 def test_program():
     for filename in files_list:
-        assert filename in dir_files, f"The file `{filename}` wasn't found in the repository root"
+        assert filename in dir_files, f"No se ha encontrado el archivo `{filename}` en la raíz del repositorio"
 
     try:
         import program
     except Exception as e:
         assert False, (
-            'Failed to run `program.py`. '
-            'Correct the mistakes:\\n'
+            'Fallo al ejecutar `program.py`. '
+            'Corrige los errores:\\n'
             f'{e}'
         )
